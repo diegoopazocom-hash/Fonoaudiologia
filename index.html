@@ -68,7 +68,7 @@
                     <p class="text-sm sm:text-md text-gray-600 mt-1">Una herramienta para estudiantes de Fonoaudiología, por Stefania Ardiles, Vania Flores y Daniela Ortiz.</p>
                     <!-- Formalidades adicionales -->
                     <p class="text-sm sm:text-md text-gray-600 mt-1">Asignatura: Bases Neuroanatómicas de la Comunicación</p>
-                    <p class="text-sm sm:text-md text-gray-600">Profesor: Gabriel Matamala</p>
+                    <p class="text-sm sm:text-md text-gray-600">Profesor: Gabriel González M.</p>
                 </div>
                 <!-- Logo de la Universidad (UDLA) - Aumentado a h-24 -->
                 <div class="flex-shrink-0 ml-4">
@@ -125,48 +125,151 @@
         // La URL de imagen placeholder será usada si no se proporciona una URL real.
         const PLACEHOLDER_IMG = "https://placehold.co/400x300/EAE6E1/403d39?text=Insertar+Imagen+Real";
 
+        // Nueva tarjeta de bienvenida (Ajustada y Centrada)
+        const welcomeCard = `
+            <div class="flex flex-col items-center justify-center text-center py-12 px-6">
+                
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">¡Bienvenidos!</h2>
+
+                <!-- Imagen de Dr. Brodmann: Ahora encima del título -->
+                <div class="max-w-xs mb-6 overflow-hidden shadow-xl rounded-lg border-2 border-gray-200">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQGEis603Btv9w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695069995765?e=2147483647&v=beta&t=xzT4VuiiUlapFSwfOgIygr_iu1H7tPct7QUOO-qJ4Fw" 
+                         alt="Dr. Korbinian Brodmann" 
+                         class="w-full h-auto max-h-52 object-contain">
+                </div>
+
+                <div class="max-w-xl mx-auto mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 text-left">
+                    <p class="text-gray-600 leading-relaxed">
+                        Korbinian Brodmann, Neuropsiquiatra alemán, fue el primero en crear un “mapa” de la corteza cerebral humana y dividirlas en áreas específicas donde cada una tiene una función, ubicación y número específico, basándose en las diferencias en la organización celular, que observó a través de un proceso de tinción. Finalmente dio a conocer las llamadas “Áreas de Brodmann” en el año 1909 en su monografía "Vergleichende Lokalisationslehre de la Großhirnrinde" donde se habla de la teoría de la localización comparada de la corteza cerebral.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mt-3">
+                        Para la <strong>Fonoaudiología</strong>, este mapeo es crucial. Nos permite realizar una <strong>correlación anátomo-clínica</strong> precisa, vinculando patologías del lenguaje, el habla, la audición o la deglución con la lesión en un área cortical específica. Es la base del <strong>diagnóstico neurofuncional</strong>.
+                    </p>
+                    <p class="mt-4 text-xs text-gray-500 text-center">
+                        Para mejor experiencia, revise la guía en un PC o active el "modo escritorio" de su celular.
+                    </p>
+                </div>
+
+                <!-- ACLARACIÓN METODOLÓGICA (Diseño Amigable) -->
+                <div id="methodology-clarification" class="max-w-xl mx-auto mt-8 p-6 bg-blue-50 border border-blue-200 rounded-lg text-left">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 6a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V6zM5 8h2v2H5V8zm4 0h2v2H9V8zM5 12h2v2H5v-2zm4 0h2v2H9v-2zm4-4h2v2h-2V8zm0 4h2v2h-2v-2z"></path></svg>
+                        Glosario para la Navegación
+                    </h3>
+                    <p class="text-md text-blue-700 leading-relaxed mb-4">
+                        Esta guía incluye <strong>todas las Áreas de Brodmann (AB 1 a 52)</strong>. Para mantener el enfoque clínico de la Fonoaudiología, hemos clasificado las áreas en dos categorías:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-lg border border-blue-100">
+                            <strong class="text-gray-800 flex items-center mb-1"><span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span> Áreas Relevantes / Clínicas</strong>
+                            <p class="text-sm text-gray-600">
+                                Áreas de la <strong>Neocorteza Humana</strong> directamente vinculadas con el lenguaje, la deglución, la audición o la cognición superior. Su función está ampliamente documentada en la literatura clínica.
+                                <br> ➡️ <strong>Contenido Completo:</strong> Las pestañas de <strong>Relevancia Fonoaudiológica</strong> y <strong>Patologías</strong> están <strong>disponibles</strong>. 
+                                <br> 💡 <strong>Ejemplo:</strong> AB 37 (Lectura), AB 44 (Articulación), AB 39 (Integración).
+                            </p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg border border-blue-100">
+                            <strong class="text-gray-800 flex items-center mb-1"><span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span> Áreas Primordiales / Límbicas</strong>
+                            <p class="text-sm text-gray-600">
+                                Estructuras más antiguas (paleocorteza) centradas en la <strong>regulación visceral</strong>, el olfato, el gusto y el <strong>procesamiento emocional básico</strong> (ínsula, cíngulo).
+                                <br> ➡️ <strong>Contenido Limitado:</strong> Las pestañas clínicas están <strong>ocultas (N/A)</strong>.
+                                <br> 💡 <strong>Ejemplo:</strong> AB 14 (Orbitofrontal Agranular), AB 23 (Cingulado Posterior).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        `;
+
+
+        // Variables globales necesarias
+        let selectedAreaId = null; 
+        
+        // --- FUNCIÓN ACCESIBLE GLOBALMENTE ---
+        // La función resetToWelcome se define antes del DOMContentLoaded para que el onclick del HTML la encuentre.
+        function resetToWelcome() {
+            selectedAreaId = null;
+            // Accede a las funciones a través de window, donde son asignadas dentro de DOMContentLoaded
+            if (window.globalRenderContent) window.globalRenderContent(null);
+            if (window.globalRenderAreaList) window.globalRenderAreaList();
+            document.querySelectorAll('.area-item').forEach(el => el.classList.remove('selected'));
+        }
+
         // DATOS AMPLIADOS Y ORDENADOS POR NÚMERO
         // *** URLs proporcionadas por el usuario están incrustadas a continuación ***
         const brodmannData = [
             // SENSORIAL PRIMARIA CONSOLIDADA (1, 2, 3)
-            { id: "1, 2, 3", name: "Corteza Somatosensorial Primaria (S1)", gyrus: "Giro postcentral", lobe: "Parietal", func: "La Corteza Somatosensorial Primaria (S1) funciona como una unidad integral para procesar las sensaciones del cuerpo (Homúnculo Sensorial). Sin embargo, cada sub-área tiene un rol de procesamiento especializado:\n\n<ul class='list-disc list-inside ml-4 mt-3 space-y-2'>\n<li><strong>Área 3 (3a y 3b):</strong> Es la principal receptora de la información. <strong>3a</strong> procesa la <strong>Propiocepción Muscular</strong> (posición de las partes del cuerpo), y <strong>3b</strong> procesa el <strong>Tacto superficial</strong>. Esencial para la retroalimentación del tono muscular.</li>\n<li><strong>Área 1:</strong> Integra la información de la textura y la discriminación táctil fina. Permite la identificación de objetos por el tacto (estereognosia).</li>\n<li><strong>Área 2:</strong> Procesa la información de la forma y el tamaño, así como la propiocepción articular. Es crucial para el control continuo de los movimientos complejos como el habla y la deglución.</li>\n</ul>", speechRole: "Provee la retroalimentación sensorial esencial de los órganos fonoarticuladores (lengua, labios, mandíbula, faringe), permitiendo el control motor fino y los ajustes articulatorios. Vital para la fase oral de la deglución.", studyReason: "Su conocimiento es crucial para entender la base sensorial de la disartria y la disfagia orofaríngea. Los déficits en la percepción oral guían los planes de terapia sensorial.", disorders: "Agnosia táctil, pérdida de la propiocepción orofacial, afectando la precisión del habla y la seguridad deglutoria (ej. no sentir restos de comida).", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/ca/BA312_-_Primary_Somatosensory_Cortex_-_with_homunculus.gif" },
+            { id: "1, 2, 3", name: "Corteza Somatosensorial Primaria (S1)", gyrus: "Giro postcentral", lobe: "Parietal", func: "La Corteza Somatosensorial Primaria (S1) funciona como una unidad integral para procesar las sensaciones del cuerpo (Homúnculo Sensorial)<sup>(1)</sup>. Se organiza somatotópicamente y es la receptora de la información táctil, propioceptiva y nociceptiva<sup>(1)</sup>. Cada sub-área tiene un rol de procesamiento especializado:\n\n<ul class='list-disc list-inside ml-4 mt-3 space-y-2'>\n<li><strong>Área 3 (3a y 3b):</strong> Es la principal receptora de la información. <strong>3a</strong> procesa la <strong>Propiocepción Muscular</strong> (posición de las partes del cuerpo), y <strong>3b</strong> procesa el <strong>Tacto superficial</strong>. Es esencial para la retroalimentación del tono muscular<sup>(1)</sup>.</li>\n<li><strong>Área 1:</strong> Integra la información de la textura y la discriminación táctil fina. Permite la identificación de objetos por el tacto (estereognosia)<sup>(1)</sup>.</li>\n<li><strong>Área 2:</strong> Procesa la información de la forma y el tamaño, así como la propiocepción articular. Es crucial para el control continuo de los movimientos complejos como el habla y la deglución<sup>(1)</sup>.</li>\n</ul>", speechRole: "Provee la retroalimentación sensorial esencial y en tiempo real de los órganos fonoarticuladores (lengua, labios, mandíbula, faringe), permitiendo el control motor fino y los ajustes articulatorios. Esta aferencia constante es vital para el control motor fino, la modulación de los ajustes articulatorios y la seguridad en la fase oral de la deglución (detección de residuos).", studyReason: "Su conocimiento es crucial para entender la base sensorial de la disartria y la disfagia orofaríngea. Los déficits en la percepción oral (ej. propiocepción lingual) guían los planes de terapia sensorial y las estrategias compensatorias.", disorders: "Agnosia táctil, pérdida de la propiocepción orofacial, afectando la precisión del habla y la seguridad deglutoria (ej. no sentir restos de comida). Las lesiones focales pueden generar alestesia.", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/ca/BA312_-_Primary_Somatosensory_Cortex_-_with_homunculus.gif" },
             
             // Motor Primaria (4)
-            { id: 4, name: "Área Motora Primaria", gyrus: "Giro precentral", lobe: "Frontal", func: "Ejecución de movimientos voluntarios, finos y complejos (Homúnculo Motor).", speechRole: "Controla directamente los músculos de la laringe, faringe, paladar, lengua y labios para la articulación de los sonidos del habla.", studyReason: "Es el ejecutor final de los comandos motores del habla. Su estudio es fundamental para entender la disartria.", disorders: "Parálisis o paresia de los músculos del habla (disartria espástica o flácida, dependiendo de si la lesión es en la motoneurona superior o inferior).", references: "(2)", functionalGroup: "Motor", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Brodmann_area_4_animation.gif" },
+            { id: 4, name: "Área Motora Primaria", gyrus: "Giro precentral", lobe: "Frontal", func: "Es la principal fuente de fibras del tracto corticoespinal (vía piramidal) y corticonuclear<sup>(2)</sup>. Se organiza somatotópicamente a través del Homúnculo Motor, donde las áreas de la boca, laringe y faringe ocupan la porción más inferior y lateral del giro precentral<sup>(2)</sup>. Su función es crucial para la ejecución de la fuerza, la velocidad y la dirección de los movimientos individuales y voluntarios<sup>(2)</sup>.", speechRole: "Controla directamente la motoneurona inferior a través del tracto corticonuclear, activando los músculos de la laringe, faringe, paladar, lengua y labios para la articulación de los sonidos del habla y la secuencia motora de la deglución.", studyReason: "Es el ejecutor final de los comandos motores planificados en áreas premotoras y suplementarias. Su estudio es fundamental para entender la etiología de la disartria (pérdida de fuerza o precisión muscular) y sus características clínicas (espástica o flácida).", disorders: "Parálisis o paresia (debilidad) de los músculos del habla (disartria espástica o flácida, dependiendo de la ubicación de la lesión), afectación de la fase oral de la deglución por debilidad<sup>(2)</sup>.", references: "(2)", functionalGroup: "Motor", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Brodmann_area_4_animation.gif" },
 
             // Asociación Sensorial/Ejecutiva (5, 6, 7, 8)
-            { id: 5, name: "Área Somatosensorial de Asociación", gyrus: "Lóbulo parietal superior", lobe: "Parietal", func: "Recibe e integra la información somatosensorial de S1. Conciencia espacial del cuerpo.", speechRole: "Integra la conciencia corporal y la posición espacial para guiar el movimiento de la escritura (grafomotricidad) y los gestos comunicativos.", studyReason: "Entender el componente propioceptivo de la comunicación y el control motor fino en actividades como la escritura.", disorders: "Síndrome de Negligencia Espacial (lesiones unilaterales), astereognosia.", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/29/BA5_-_animation.gif" },
-            { id: 6, name: "Área Premotora y Motora Suplementaria", gyrus: "Giro frontal superior y medio", lobe: "Frontal", func: "Planificación, secuenciación y coordinación de movimientos complejos. Iniciación motora.", speechRole: "Organiza las secuencias motoras para palabras y frases (ej. 'ho-la'). La AMS es clave en la iniciación del habla y la fluidez.", studyReason: "Esencial para entender la apraxia del habla, un trastorno de la planificación motora, y los problemas de iniciación motora.", disorders: "Apraxia del habla (dificultad para planificar y secuenciar los movimientos del habla), mutismo acinético (lesión de AMS).", references: "(2)", functionalGroup: "Motor", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Brodmann_area_6_animation_small.gif" },
-            { id: 7, name: "Asociación Viso-Motora", gyrus: "Lóbulo parietal superior", lobe: "Parietal", func: "Coordinación ojo-mano, atención espacial y procesamiento viso-espacial.", speechRole: "Controla el seguimiento visual de un texto (lectura) y la integración de la visión con la acción manual (escritura).", studyReason: "Fundamental para la lectoescritura y el seguimiento de objetos o personas en el contexto comunicativo.", disorders: "Ataxia óptica (dificultad para guiar movimientos con la vista), dificultades de grafomotricidad.", references: "(3)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Brodmann_area7_-_animation.gif" },
-            { id: 8, name: "Campos Oculares Frontales", gyrus: "Giro frontal medio", lobe: "Frontal", func: "Control de los movimientos oculares voluntarios (sacádicos).", speechRole: "Permite el escaneo y seguimiento de texto durante la lectura fluida. Es crucial para el contacto visual y la atención social en la comunicación.", studyReason: "Relación entre el control visual y los trastornos de lectura y atención (TDAH).", disorders: "Desviación tónica de la mirada hacia la lesión, apraxia oculomotora (dificultad para iniciar movimientos oculares voluntarios).", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Brodmann_area_8_animation_small.gif" },
+            { id: 5, name: "Área Somatosensorial de Asociación", gyrus: "Lóbulo parietal superior", lobe: "Parietal", func: "Recibe aferencias primarias de S1 (Áreas 1, 2, 3) y las integra con información visual y propioceptiva para crear una representación unificada del cuerpo en el espacio (esquema corporal)<sup>(1)</sup>. Es clave para el reconocimiento de objetos por el tacto sin la vista<sup>(3)</sup>.", speechRole: "Integra la conciencia corporal y la posición espacial para guiar el movimiento de la escritura (grafomotricidad) y los gestos comunicativos, asegurando que las acciones manuales sean precisas en el entorno. También participa en la planificación de movimientos finos.", studyReason: "Su disfunción está ligada a déficits en el esquema corporal y la agnosia táctil, lo que impacta la terapia de la escritura y la conciencia del movimiento articulatorio.", disorders: "Síndrome de Negligencia Espacial (lesiones unilaterales del hemisferio no dominante), astereognosia (incapacidad para reconocer objetos por el tacto)<sup>(3)</sup>.", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/29/BA5_-_animation.gif" },
+            { id: 6, name: "Área Premotora y Motora Suplementaria", gyrus: "Giro frontal superior y medio", lobe: "Frontal", func: "Es responsable de la <strong>planificación, secuenciación y coordinación</strong> de movimientos complejos antes de que el Área 4 los ejecute<sup>(2)</sup>. La Área Motora Suplementaria (AMS) es particularmente clave en la <strong>iniciación</strong> y la programación de secuencias motoras aprendidas<sup>(2)</sup>.", speechRole: "Organiza las secuencias motoras complejas requeridas para palabras y frases (ej. la transición fluida de /k/ a /a/ a /sa/ en 'casa'). La AMS es clave en la <strong>iniciación del habla</strong>, la fluidez y la planificación de secuencias discursivas.", studyReason: "Esencial para entender la <strong>apraxia del habla</strong>, un trastorno de la planificación motora, y los problemas de iniciación o fluidez en la tartamudez o el mutismo acinético.", disorders: "Apraxia del habla (dificultad para planificar y secuenciar los movimientos del habla en ausencia de parálisis), mutismo acinético (lesión de AMS, incapacidad para iniciar la fonación)<sup>(2)</sup>.", references: "(2)", functionalGroup: "Motor", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Brodmann_area_6_animation_small.gif" },
+            { id: 7, name: "Asociación Viso-Motora", gyrus: "Lóbulo parietal superior", lobe: "Parietal", func: "Integra información visual y somatosensorial para la <strong>coordinación ojo-mano</strong> y la <strong>atención espacial</strong> dirigida<sup>(3)</sup>. Mantiene un mapa del espacio peripersonal. Es fundamental para alcanzar y manipular objetos bajo guía visual<sup>(3)</sup>.", speechRole: "Controla el seguimiento visual de un texto, lo que permite la <strong>lectura fluida</strong> y la correcta fijación ocular. Es la base para la integración de la visión con la acción manual (escritura y gestos).", studyReason: "Fundamental para la lectoescritura, la grafomotricidad, y la coordinación de gestos. Su daño afecta la capacidad de interactuar con el entorno comunicativo.", disorders: "Ataxia óptica (dificultad para guiar movimientos con la vista), dificultades de grafomotricidad y coordinación visuomanual<sup>(3)</sup>.", references: "(3)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Brodmann_area7_-_animation.gif" },
+            { id: 8, name: "Campos Oculares Frontales", gyrus: "Giro frontal medio", lobe: "Frontal", func: "Control de los movimientos oculares <strong>voluntarios</strong> (sacádicos) y de la exploración visual<sup>(2)</sup>. Recibe y procesa información sobre la ubicación de objetos en el espacio y dirige la atención visual hacia ellos.", speechRole: "Permite el escaneo y seguimiento de texto durante la <strong>lectura fluida</strong> al dirigir los movimientos sacádicos. Es crucial para el <strong>contacto visual</strong>, la alternancia de la mirada y la atención social en la comunicación.", studyReason: "Esencial para comprender los trastornos de lectura relacionados con el seguimiento visual y el control atencional, como en el TDAH o la dislexia.", disorders: "Desviación tónica de la mirada hacia la lesión, apraxia oculomotora (dificultad para iniciar movimientos oculares voluntarios), déficits en la búsqueda visual y el seguimiento de líneas en la lectura<sup>(2)</sup>.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Brodmann_area_8_animation_small.gif" },
 
-            // Prefrontal Superior (9, 10, 11)
-            { id: 9, name: "Corteza Prefrontal Dorsolateral", gyrus: "Giro frontal superior", lobe: "Frontal", func: "Memoria de trabajo, planificación, organización y monitorización de la conducta.", speechRole: "Es la base para mantener la información verbal activa (ej. seguir una conversación, comprender oraciones complejas o planificar un discurso).", studyReason: "Imprescindible para la evaluación y rehabilitación de los Trastornos de la Comunicación de Origen Cognitivo (TCOC).", disorders: "Déficits graves de memoria de trabajo, incapacidad para planificar y secuenciar tareas (disfunción ejecutiva).", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Brodmann_area_9_animation_small.gif" },
-            { id: 10, name: "Corteza Prefrontal Anterior", gyrus: "Polo frontal", lobe: "Frontal", func: "Metacognición, razonamiento abstracto, integración de múltiples tareas y pensamiento futuro.", speechRole: "Regula la intención comunicativa, la autoconciencia en la conversación y la selección de estrategias pragmáticas.", studyReason: "Clave para entender la pragmática y la intencionalidad en la comunicación social.", disorders: "Apatía, dificultad en la toma de decisiones, alteraciones en la cognición social y la teoría de la mente.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Brodmann_area_10_animation_small.gif" },
-            { id: 11, name: "Corteza Orbitofrontal (Central)", gyrus: "Giro orbital", lobe: "Frontal", func: "Regulación emocional, inhibición de respuestas inapropiadas, procesamiento de recompensa.", speechRole: "Modula el comportamiento comunicativo social: inhibe comentarios fuera de lugar o regula el tono emocional de la voz.", studyReason: "Su disfunción se relaciona con la desinhibición verbal y la falta de tacto comunicativo, común en daño cerebral frontal.", disorders: "Desinhibición, impulsividad, cambios de personalidad, conductas obsesivo-compulsivas.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Brodmann_area_11_animation_small.gif" },
-            { id: 12, name: "Corteza Orbitofrontal (Límbica)", gyrus: "Giro orbital/Región subcallosa", lobe: "Frontal", func: "Regulación de la conducta emocional, procesamiento de riesgo/recompensa y control visceral (similar a A11).", speechRole: "Contribuye a la modulación del afecto, lo que afecta la prosodia emocional y la regulación de la interacción social y comunicativa.", studyReason: "Relevante para los trastornos de la comunicación asociados a la desregulación emocional.", disorders: "Dificultad en el procesamiento de emociones, conductas de riesgo en la toma de decisiones, alteraciones en la interacción social.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Brodmann_area_12_animation_small.gif" },
+            // Prefrontal Superior (9, 10, 11, 12)
+            { id: 9, name: "Corteza Prefrontal Dorsolateral", gyrus: "Giro frontal superior", lobe: "Frontal", func: "Es el centro de la <strong>memoria de trabajo</strong> (MDT), la <strong>planificación</strong>, la <strong>organización</strong>, la <strong>monitorización</strong> de la conducta y la <strong>regulación de la atención</strong><sup>(2)</sup>. Permite mantener la información activa y manipularla durante un corto periodo de tiempo.", speechRole: "Es la base para mantener activa la información verbal (MDT verbal, ej. recordar una secuencia de instrucciones o seguir el hilo de un discurso complejo) y la planificación del discurso coherente y organizado.", studyReason: "Imprescindible para la evaluación y rehabilitación de los Trastornos de la Comunicación de Origen Cognitivo (TCOC), ya que los déficits de MDT afectan la comprensión y la producción compleja.", disorders: "Déficits graves de memoria de trabajo, incapacidad para generar un discurso organizado y coherente, rigidez cognitiva, dificultades en la fluidez verbal por categorías<sup>(2)</sup>.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Brodmann_area_9_animation_small.gif" },
+            { id: 10, name: "Corteza Prefrontal Anterior", gyrus: "Polo frontal", lobe: "Frontal", func: "Involucrada en la <strong>metacognición</strong> (pensar sobre el propio pensamiento), el <strong>razonamiento abstracto</strong>, la integración de múltiples tareas y el <strong>pensamiento futuro</strong> (prospección)<sup>(2)</sup>. Es clave en la toma de decisiones complejas y el establecimiento de metas a largo plazo.", speechRole: "Regula la <strong>intención comunicativa</strong>, la autoconciencia en la conversación, la selección de estrategias pragmáticas y la adaptación del lenguaje al contexto social.", studyReason: "Clave para entender la pragmática avanzada, la teoría de la mente y la capacidad de adaptar el discurso al interlocutor, fundamental en la evaluación de daño cerebral frontal.", disorders: "Apatía, dificultad en la toma de decisiones complejas y la resolución de problemas abstractos, alteraciones en la cognición social y la teoría de la mente<sup>(2)</sup>.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Brodmann_area_10_animation_small.gif" },
+            { id: 11, name: "Corteza Orbitofrontal (Central)", gyrus: "Giro orbital", lobe: "Frontal", func: "Regulación emocional y conductual<sup>(2)</sup>. Es fundamental para la <strong>inhibición de respuestas inapropiadas</strong> y el procesamiento de la recompensa y el castigo, ajustando la conducta social<sup>(2)</sup>.", speechRole: "Modula el <strong>comportamiento comunicativo social</strong> y la <strong>prosodia emocional</strong>. Inhibe comentarios fuera de lugar, regula el turno de habla y ajusta el tono o volumen de la voz en función de la situación.", studyReason: "Su disfunción se relaciona directamente con la <strong>desinhibición verbal</strong>, la falta de tacto comunicativo y la alteración de la prosodia afectiva, común en el daño cerebral frontal y la demencia frontotemporal.", disorders: "Desinhibición, impulsividad, cambios marcados de personalidad, pobre juicio social y conductas verbales obsesivo-compulsivas o inadecuadas<sup>(2)</sup>.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Brodmann_area_11_animation_small.gif" },
+            { id: 12, name: "Corteza Orbitofrontal (Límbica)", gyrus: "Giro orbital/Región subcallosa", lobe: "Frontal", func: "Área adyacente al área 11, involucrada en la <strong>regulación de la conducta emocional</strong> y el procesamiento de riesgo/recompensa<sup>(2)</sup>. Está fuertemente conectada con el sistema límbico, influyendo en las respuestas automáticas a estímulos afectivos.", speechRole: "Contribuye a la modulación del afecto, lo que es esencial para la <strong>prosodia emocional</strong> (tono de voz que indica sarcasmo, felicidad o enojo) y la regulación de la interacción social y comunicativa, especialmente ante el conflicto.", studyReason: "Relevante para comprender los trastornos de la comunicación asociados a la <strong>desregulación emocional</strong> y la interpretación incorrecta de las intenciones comunicativas de otros.", disorders: "Dificultad en el procesamiento de emociones, conductas de riesgo en la toma de decisiones, alteraciones en la interacción social debido a falta de modulación emocional.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Brodmann_area_12_animation_small.gif" },
+
+            // ÁREAS LIMBICAS/PRIMARIAS (13-16) - NO FONO/PATOLOGÍAS
+            { id: 13, name: "Corteza Insular Posterolateral", gyrus: "Ínsula", lobe: "Insular", func: "Procesamiento sensorial visceral, interocepción (sensaciones internas del cuerpo) y percepción del dolor<sup>(1)</sup>. También interviene en la integración multisensorial de la deglución y el asco<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Sensorial", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 14, name: "Corteza Orbitofrontal Agranular (Límbica)", gyrus: "Superficie medial y orbital del frontal", lobe: "Frontal", func: "Regulación visceral, funciones de recompensa y castigo a nivel subcortical<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 15, name: "Corteza Temporal Anterior (Límbica)", gyrus: "Polo temporal", lobe: "Temporal", func: "Funciones vestibulares, olfativas y viscerales<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Sensorial", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 16, name: "Corteza Insular Anterior (Perirrinal)", gyrus: "Ínsula", lobe: "Insular", func: "Procesamiento gustativo, dolor visceral y funciones autonómicas<sup>(1)</sup>. Es la región de transición que conecta el gusto (A43) con el sistema límbico, influyendo en las preferencias alimentarias y el asco.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Sensorial", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
 
             // VISUAL CONSOLIDADA (17, 18, 19)
-            { id: "17, 18, 19", name: "Corteza Visual (Primaria y Asociación)", gyrus: "Cisura calcarina y áreas adyacentes", lobe: "Occipital", func: "Recepción (17), reconocimiento (18) e integración multisensorial (19) de estímulos visuales. Esencial para la percepción de formas, movimiento y profundidad.", speechRole: "La base neurobiológica de la lectoescritura, pues permite la decodificación de grafemas, el reconocimiento de palabras, el seguimiento visual del texto y la asociación de lo visto con el lenguaje (comprensión lectora).", studyReason: "Fundamental en el diagnóstico y terapia de la dislexia, alexia y agnosias visuales que impactan directamente la comunicación escrita.", disorders: "Ceguera cortical (lesión del área 17), Alexia Pura (incapacidad para leer sin otras afectaciones del lenguaje), Agnosia Visual (lesión 18/19, incapacidad para reconocer objetos, símbolos o gestos), Déficits en el seguimiento visual y la coordinación viso-espacial, esenciales para la lectura fluida.", references: "(3, 5)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9d/BA17%2C18%2C19_-_Visual_cortex_%28V1%2C_V2%2C_V3%29_-_animation.gif" },
+            { id: "17, 18, 19", name: "Corteza Visual (Primaria y Asociación)", gyrus: "Cisura calcarina y áreas adyacentes", lobe: "Occipital", func: "La <strong>Área 17 (V1)</strong> es el receptor primario de la información visual<sup>(3)</sup>. La <strong>Área 18 (V2)</strong> y <strong>19 (V3, V4, V5)</strong> son áreas de asociación que procesan reconocimiento, integración multisensorial y análisis de movimiento, profundidad y color<sup>(3)</sup>. Son el origen de las rutas 'dorsal' (dónde) y 'ventral' (qué)<sup>(3)</sup>.", speechRole: "La base neurobiológica de la lectoescritura, pues permite la decodificación de grafemas, el reconocimiento de palabras (vía lexical) y el seguimiento visual del texto<sup>(5)</sup>. Es esencial para la asociación de lo visto con el lenguaje (comprensión lectora).", studyReason: "Fundamental en el diagnóstico y terapia de la <strong>dislexia, alexia y agnosias visuales</strong> que impactan directamente la comunicación escrita. Es el primer paso en la entrada de la información textual.", disorders: "Ceguera cortical (lesión del área 17)<sup>(3)</sup>, Alexia Pura (incapacidad para leer sin otras afectaciones del lenguaje)<sup>(5)</sup>, Agnosia Visual (lesión 18/19, incapacidad para reconocer objetos, símbolos o gestos)<sup>(3)</sup>, Déficits en el seguimiento visual y la coordinación viso-espacial, esenciales para la lectura fluida.", references: "(3, 5)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9d/BA17%2C18%2C19_-_Visual_cortex_%28V1%2C_V2%2C_V3%29_-_animation.gif" },
             
             // Temporal Inferior y Medio (20, 21, 22)
-            { id: 20, name: "Giro Temporal Inferior", gyrus: "Giro temporal inferior", lobe: "Temporal", func: "Procesamiento avanzado de la información visual, incluyendo reconocimiento de objetos y caras.", speechRole: "Es parte de la ruta del 'qué' visual. Su función es crítica para la denominación (nombrar lo que se ve) y el reconocimiento de expresiones faciales (pragmática).", studyReason: "Relevante en la evaluación de anomias (dificultad para nombrar) y déficits de cognición social.", disorders: "Prosopagnosia (incapacidad para reconocer caras), agnosia visual asociativa.", references: "(3)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2d/BA20_-_animation.gif" },
-            { id: 21, name: "Giro Temporal Medio", gyrus: "Giro temporal medio", lobe: "Temporal", func: "Asociación y memoria. Procesamiento semántico de palabras y objetos.", speechRole: "Almacenamiento y recuperación del significado de palabras y conceptos, esencial para la fluidez y el acceso léxico.", studyReason: "Su disfunción contribuye a la anomia y las dificultades en el acceso al vocabulario.", disorders: "Anomia, dificultades de acceso léxico, alteraciones en la memoria semántica.", references: "(4)", functionalGroup: "Auditivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d8/BA21_-_animation.gif" },
-            { id: 22, name: "Área de Wernicke (parte posterior)", gyrus: "Giro temporal superior", lobe: "Temporal", func: "Comprensión del lenguaje hablado y escrito.", speechRole: "Es el centro neurálgico para la decodificación fonológica y semántica del lenguaje. Permite entender lo que se oye o lee.", studyReason: "Es una de las áreas más críticas para la fonoaudiología. Su estudio es la base para entender las afasias comprensivas.", disorders: "Afasia de Wernicke (habla no fluida pero sin sentido, jergafasia, pobre comprensión).", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/BA22_-_animation.gif" },
+            { id: 20, name: "Giro Temporal Inferior", gyrus: "Giro temporal inferior", lobe: "Temporal", func: "Es parte de la <strong>ruta ventral del 'qué'</strong> visual<sup>(3)</sup>. Participa en el procesamiento avanzado de la información visual, incluyendo el reconocimiento de <strong>objetos, caras y lugares</strong> complejos<sup>(3)</sup>. Está conectado al sistema de memoria.", speechRole: "Su función es crítica para la denominación (nombrar lo que se ve) y el reconocimiento de expresiones faciales y gestos (aspecto pragmático de la comunicación no verbal).", studyReason: "Relevante en la evaluación de anomias (dificultad para nombrar objetos vistos) y déficits de cognición social, como la prosopagnosia adquirida.", disorders: "Prosopagnosia (incapacidad para reconocer caras), agnosia visual asociativa, anomia por vía visual<sup>(3)</sup>.", references: "(3)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2d/BA20_-_animation.gif" },
+            { id: 21, name: "Giro Temporal Medio", gyrus: "Giro temporal medio", lobe: "Temporal", func: "Área de asociación multisensorial. Está fuertemente implicada en el <strong>almacenamiento de la memoria semántica</strong> (significado de las palabras y conceptos), la memoria episódica y la integración de estímulos visuales y auditivos<sup>(4)</sup>.", speechRole: "Es un gran depósito para el almacenamiento y la recuperación del significado de palabras y conceptos, siendo esencial para la fluidez verbal y la velocidad de acceso léxico. Soporta la comprensión compleja.", studyReason: "Su disfunción contribuye a la <strong>anomia</strong> (dificultad para encontrar palabras) y las dificultades en el acceso léxico, así como en la comprensión de conceptos abstractos.", disorders: "Anomia, dificultades de acceso léxico, alteraciones en la memoria semántica<sup>(4)</sup>.", references: "(4)", functionalGroup: "Auditivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d8/BA21_-_animation.gif" },
+            { id: 22, name: "Área de Wernicke (parte posterior)", gyrus: "Giro temporal superior (posterior)", lobe: "Temporal", func: "Es el centro neurálgico de la <strong>comprensión del lenguaje</strong> hablado y escrito (decodificación fonológica y semántica)<sup>(4)</sup>. Es el punto donde el sonido se transforma en significado<sup>(4)</sup>.", speechRole: "Responsable de la decodificación fonológica y semántica del lenguaje. Permite al individuo entender lo que se oye o lee, y sirve como centro de monitoreo para el habla propia.", studyReason: "Es una de las áreas más críticas para la fonoaudiología. Su estudio es la base para entender las <strong>afasias comprensivas</strong> y la logorrea asociada a la falta de monitoreo.", disorders: "Afasia de Wernicke (habla fluida pero sin sentido, jergafasia, dificultad severa para la comprensión del lenguaje oral y escrito)<sup>(4)</sup>.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/BA22_-_animation.gif" },
+            
+            // ÁREAS LIMBICAS/PRIMARIAS (23-38) - NO FONO/PATOLOGÍAS excepto A37
+            { id: 23, name: "Corteza Cingulada Posterior Ventral", gyrus: "Giro cingulado", lobe: "Límbico", func: "Integración de la memoria y la atención espacial; rol en la navegación, la cognición social y forma parte de la Red Neuronal por Defecto (DMN)<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Brodmann_Cytoarchitectonics_23.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 24, name: "Corteza Cingulada Anterior (Dorsal)", gyrus: "Giro cingulado", lobe: "Límbico", func: "Regulación de la atención, toma de decisiones, control del error (monitoreo de conflictos) e iniciación motora/volitiva<sup>(2)</sup>. Crítica para la voluntad de acción.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/Brodmann_area_24_animation_small.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 25, name: "Corteza Subgenual", gyrus: "Área subcallosa", lobe: "Límbico", func: "Regulación del estado de ánimo y respuestas autonómicas; núcleo de la red de la depresión<sup>(1)</sup>. Conexión con el tronco cerebral.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Brodmann_area_25_animation_small.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 26, name: "Área Ectosplenial (Límbica)", gyrus: "Istmo del cíngulo", lobe: "Límbico", func: "Procesamiento de la memoria espacial y emocional (área de transición entre el cíngulo y el hipocampo)<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Brodmann_Cytoarchitectonics_26.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 27, name: "Presubiculum (Parahipocampal)", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Procesamiento espacial y de la memoria episódica; puerta de entrada a las subestructuras del hipocampo<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Brodmann_Cytoarchitectonics_27.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 28, name: "Corteza Entorrinal Posterior", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Sistema de navegación y ubicación espacial; memoria de contexto y punto de inicio de la enfermedad de Alzheimer<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/Brodmann_Cytoarchitectonics_28.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 29, name: "Corteza Retrosplenial (Granular)", gyrus: "Giro cingulado", lobe: "Límbico", func: "Orientación espacial, memoria autobiográfica y memoria de la fuente de información (saber dónde se aprendió algo)<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/38/Brodmann_Cytoarchitectonics_29.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 30, name: "Corteza Subsplenial", gyrus: "Giro cingulado", lobe: "Límbico", func: "Conexión entre la memoria y la emoción; parte del sistema de recompensa y el procesamiento del miedo<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Brodmann_Cytoarchitectonics_30.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 31, name: "Corteza Cingulada Posterior Dorsal", gyrus: "Giro cingulado", lobe: "Límbico", func: "Control de la atención y monitoreo del entorno; una de las principales regiones de la Red Neuronal por Defecto (DMN)<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a1/BA31_-_animation.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 32, name: "Corteza Cingulada Anterior (Ventral)", gyrus: "Giro cingulado", lobe: "Límbico", func: "Procesamiento del riesgo y la recompensa social; regulación emocional/cognitiva y de la empatía<sup>(2)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Brodmann_area_32_animation_small.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 33, name: "Corteza Prefrontal Supragenual", gyrus: "Área cingulada anterior", lobe: "Límbico", func: "Intervención en procesos de ansiedad y depresión; regula la actividad autónoma y la respuesta al estrés<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Brodmann_area_33_animation_small.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 34, name: "Corteza Olfativa Primaria", gyrus: "Uncus (Giro parahipocampal)", lobe: "Temporal", func: "Procesamiento consciente del olfato (sistema olfativo)<sup>(1)</sup>. Es la única sensación que no pasa por el tálamo antes de llegar a la corteza.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Brodmann_Cytoarchitectonics_34.png/2000px-Brodmann_Cytoarchitectonics_34.png", isSpecial: true, specialLabel: "Área Primordial" },
+            { id: 35, name: "Corteza Perirrinal (Anterior)", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Memoria de reconocimiento de objetos (el 'qué') y asociación con el contexto. Está interconectada con la vía visual ventral<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e0/BA35_-_inferior_view.png", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 36, name: "Corteza Perirrinal (Posterior)", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Memoria contextual y de escena; formación de nuevos recuerdos asociativos. Es crítica para la formación de la memoria declarativa<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4d/BA36_-_animation.gif", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            // ÁREA 37 - SÍ ES CRUCIAL PARA FONOAUDIOLOGÍA (VWFA)
+            { id: 37, name: "Corteza Fusiforme Posterior", gyrus: "Giro fusiforme", lobe: "Temporal", func: "Reconocimiento de caras (Área Fusiforme de Caras), objetos y, en el hemisferio izquierdo dominante, la <strong>Forma Visual de la Palabra (VWFA)</strong><sup>(5)</sup>. Es el punto de convergencia de la información visual para la lectura.", speechRole: "La VWFA es un área especializada en el reconocimiento ultrarrápido de secuencias de letras (palabras) como una unidad visual, permitiendo la lectura eficiente y fluida (ruta lexical directa).", studyReason: "Conocer el centro de la lectura por la vía lexical es vital para el diagnóstico de <strong>alexias</strong> y para la comprensión de las dislexias adquiridas y de desarrollo, pues define la vía de acceso al significado.", disorders: "Alexia Pura (ceguera a las palabras sin pérdida de escritura o habla)<sup>(5)</sup>, prosopagnosia adquirida (incapacidad para reconocer caras familiares).", references: "(5)", functionalGroup: "Visual", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/BA37_-_animation.gif" },
+            { id: 38, name: "Polo Temporal", gyrus: "Polo temporal", lobe: "Temporal", func: "El extremo anterior del lóbulo temporal. Se encarga de la <strong>integración de la información social/emocional compleja</strong>, la recuperación de memoria semántica contextual y el procesamiento de nombres propios<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4d/BA38_-_animation.gif", isSpecial: true, specialLabel: "Área Límbica/Social" },
             
             // Asociación Parietal (39, 40)
-            { id: 39, name: "Giro Angular", gyrus: "Giro angular", lobe: "Parietal", func: "Integración multisensorial para la lectoescritura (asociación grafema-fonema).", speechRole: "Conecta la información visual con la auditiva, permitiendo 'traducir' las letras en sonidos y viceversa. Es clave en la lectura.", studyReason: "Crucial para el aprendizaje y la terapia de la lectoescritura (dislexia, disgrafia).", disorders: "Síndrome de Gerstmann (agrafia, acalculia, agnosia digital, desorientación derecha-izquierda), alexia con agrafia.", references: "(5)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/06/BA39_-_animation.gif" },
-            { id: 40, name: "Giro Supramarginal", gyrus: "Giro supramarginal", lobe: "Parietal", func: "Procesamiento fonológico y memoria de trabajo verbal.", speechRole: "Ayuda a 'retener' los sonidos de las palabras en la mente para poder procesarlos, repetirlos y manipularlos.", studyReason: "Importante para el desarrollo del lenguaje, la conciencia fonológica y la terapia de trastornos de los sonidos del habla.", disorders: "Afasia de conducción (dificultad para la repetición), disgrafia fonológica.", references: "(5)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/11/BA40_-_animation.gif" },
+            { id: 39, name: "Giro Angular", gyrus: "Giro angular", lobe: "Parietal", func: "Centro de <strong>integración multisensorial</strong> (visual, auditiva y somatosensorial)<sup>(5)</sup>. Es clave para la abstracción, el cálculo, la metacognición y, fundamentalmente, para la asociación grafema-fonema en la lectoescritura<sup>(5)</sup>.", speechRole: "Conecta la información visual con la auditiva, permitiendo 'traducir' las letras en sonidos y viceversa. Es clave en la lectura y escritura (especialmente la vía fonológica) y en el acceso al significado de las palabras.", studyReason: "Crucial para el aprendizaje y la terapia de la <strong>lectoescritura</strong> (dislexia, disgrafia) y para entender el Síndrome de Gerstmann.", disorders: "Síndrome de Gerstmann (agrafia, acalculia, agnosia digital, desorientación derecha-izquierda)<sup>(5)</sup>, alexia con agrafia, anomia en ciertas categorías.", references: "(5)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/06/BA39_-_animation.gif" },
+            { id: 40, name: "Giro Supramarginal", gyrus: "Giro supramarginal", lobe: "Parietal", func: "Procesamiento <strong>fonológico</strong> y componente clave del <strong>bucle fonológico</strong> de la memoria de trabajo verbal (MDT)<sup>(5)</sup>. Su función principal es manipular y almacenar temporalmente la información fonológica para la repetición y el aprendizaje.", speechRole: "Ayuda a 'retener' los sonidos de las palabras en la mente para poder procesarlos, repetirlos y manipularlos (ej. conciencia fonológica). Participa en la imitación verbal.", studyReason: "Importante para el desarrollo del lenguaje, la <strong>conciencia fonológica</strong> y la terapia de trastornos de los sonidos del habla. Su lesión causa la Afasia de Conducción.", disorders: "Afasia de conducción (dificultad severa para la repetición)<sup>(4)</sup>, disgrafia fonológica, alteraciones en la memoria de trabajo fonológica.", references: "(5)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/11/BA40_-_animation.gif" },
 
             // Auditivas CONSOLIDADA (41, 42) y Gusto (43)
-            { id: "41, 42", name: "Corteza Auditiva (Primaria y Secundaria)", gyrus: "Giros transversos de Heschl y Giro temporal superior", lobe: "Temporal", func: "Recepción (41) y procesamiento (42) de la información auditiva. La 41 procesa los tonos y frecuencias, y la 42 reconoce y asocia los sonidos como fonemas o palabras, iniciando la vía de la comprensión.", speechRole: "Base fundamental para la percepción del habla. Permite la discriminación auditiva necesaria para el aprendizaje de los fonemas y la comprensión inicial de un mensaje.", studyReason: "Esencial en audiología para entender los trastornos del procesamiento auditivo central y en el lenguaje para el diagnóstico de la agnosia auditiva verbal.", disorders: "Sordera cortical, Agnosia auditiva, dificultades severas en la discriminación fonológica.", references: "(6)", functionalGroup: "Auditivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Human_temporal_lobe_areas.png" },
-            { id: 43, name: "Corteza Gustativa", gyrus: "Base del giro postcentral y opérculo parietal/insular", lobe: "Parietal/Insular", func: "Procesamiento consciente del gusto.", speechRole: "Esencial para el reflejo del gusto, que influye en la seguridad y las preferencias durante la fase oral de la deglución.", studyReason: "Directamente relacionada con la deglución y el manejo de residuos orales; su alteración puede impactar la ingesta.", disorders: "Ageusia (pérdida del gusto), disgeusia (distorsión del gusto), implicaciones en el rechazo alimentario.", references: "(1)", functionalGroup: "Sensorial", imageUrl: "" },
+            { id: "41, 42", name: "Corteza Auditiva (Primaria y Secundaria)", gyrus: "Giros transversos de Heschl y Giro temporal superior", lobe: "Temporal", func: "La <strong>Área 41 (Primaria)</strong> es el receptor inicial de la información auditiva (tonos y frecuencias)<sup>(6)</sup>. La <strong>Área 42 (Secundaria)</strong> comienza el análisis de los patrones auditivos, reconociendo secuencias de sonido y asociándolas<sup>(6)</sup>, iniciando la vía de la comprensión auditiva.", speechRole: "Base fundamental para la percepción del habla. Permite la <strong>discriminación auditiva</strong> necesaria para el aprendizaje de los fonemas y es el punto de entrada para la comprensión del lenguaje (trabajando en conjunto con el Área 22).", studyReason: "Esencial en audiología para entender los trastornos del procesamiento auditivo central y en el lenguaje para el diagnóstico de la <strong>agnosia auditiva verbal</strong>.", disorders: "Sordera cortical, Agnosia auditiva, dificultades severas en la discriminación fonológica<sup>(6)</sup>.", references: "(6)", functionalGroup: "Auditivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Human_temporal_lobe_areas.png" },
+            { id: 43, name: "Corteza Gustativa", gyrus: "Base del giro postcentral y opérculo parietal/insular", lobe: "Parietal/Insular", func: "Procesamiento consciente del gusto<sup>(1)</sup>. Recibe información del tálamo y se proyecta a la ínsula. Su activación influye en las respuestas autonómicas y afectivas relacionadas con la ingesta<sup>(1)</sup>.", speechRole: "Esencial para el reflejo del gusto, que influye en la seguridad, el placer y las preferencias durante la <strong>fase oral de la deglución</strong>. La sensación del gusto alerta sobre la calidad de los alimentos.", studyReason: "Directamente relacionada con la deglución y el manejo de residuos orales; su alteración puede impactar la ingesta y la adherencia a dietas modificadas.", disorders: "Ageusia (pérdida del gusto), disgeusia (distorsión del gusto), implicaciones en el rechazo alimentario y la seguridad deglutoria por falta de alerta sensorial<sup>(1)</sup>.", references: "(1)", functionalGroup: "Sensorial", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Brodmann_Cytoarchitectonics_43.png" },
 
             // Área de Broca (44, 45) y Prefrontal Lateral (46, 47)
-            { id: 44, name: "Área de Broca (Pars Opercularis)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Planificación motora y articulación del habla.", speechRole: "Organiza los patrones motores finos y secuenciales para la producción fluida de sonidos, sílabas y palabras.", studyReason: "Área fundamental para la producción del habla. Su estudio es esencial para entender las afasias motoras y la apraxia.", disorders: "Afasia de Broca (habla no fluida, agramatismo, anomia, buena comprensión), apraxia del habla.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Brodmann_area_44_animation_small.gif" },
-            { id: 45, name: "Área de Broca (Pars Triangularis)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Procesamiento sintáctico, gramatical y semántico del lenguaje expresivo.", speechRole: "Ayuda a estructurar las oraciones con la gramática correcta (ej. 'el perro persigue al gato').", studyReason: "Importante para la terapia de agramatismo en afasias y para trastornos del desarrollo del lenguaje (TDL) con afectación sintáctica.", disorders: "Agramatismo, dificultades en la fluidez verbal y en la generación de oraciones complejas.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Brodmann_area_45_animation_small.gif" },
-            { id: 46, name: "Corteza Prefrontal Dorsolateral", gyrus: "Giro frontal medio", lobe: "Frontal", func: "Control ejecutivo superior y mantenimiento del foco atencional.", speechRole: "Soporte de la memoria de trabajo verbal y no verbal. Esencial para el procesamiento sintáctico de oraciones largas y complejas.", studyReason: "Disfunción ligada a los déficits en la producción y comprensión de estructuras lingüísticas complejas.", disorders: "Déficit en la manipulación de información en línea, dificultades en la comprensión de estructuras incrustadas (sintaxis).", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Brodmann_area_46_animation_small.gif" },
-            { id: 47, name: "Corteza Orbitofrontal (Lateral)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Procesamiento de la sintaxis y la semántica, especialmente el lenguaje abstracto y la ambigüedad.", speechRole: "Trabaja en conjunto con Broca para la estructuración sintáctica, pero se enfoca más en el significado de palabras y frases ambiguas. Implicada en la prosodia.", studyReason: "Implicada en la prosodia y la capacidad de interpretación del lenguaje figurado, áreas cruciales en la pragmática.", disorders: "Problemas en la interpretación de metáforas, ambigüedad semántica, y posibles déficits prosódicos.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Brodmann_area_47_animation_small.gif" },
+            { id: 44, name: "Área de Broca (Pars Opercularis)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Principalmente responsable de la <strong>planificación motora</strong> y la <strong>ejecución de la articulación del habla</strong><sup>(4)</sup>. También está implicada en el procesamiento sintáctico de oraciones complejas.", speechRole: "Organiza los patrones motores finos y secuenciales para la producción fluida de sonidos, sílabas y palabras. Es el motor de la <strong>fluidez articulatoria</strong> y el componente fonológico del lenguaje expresivo.", studyReason: "Área fundamental para la producción del habla. Su estudio es esencial para entender las <strong>afasias motoras (de Broca)</strong>, el agramatismo y la <strong>apraxia del habla</strong>.", disorders: "Afasia de Broca (habla no fluida, esfuerzo articulatorio, agramatismo, anomia, buena comprensión)<sup>(4)</sup>, apraxia del habla.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Brodmann_area_44_animation_small.gif" },
+            { id: 45, name: "Área de Broca (Pars Triangularis)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Procesamiento <strong>sintáctico, gramatical y semántico</strong> del lenguaje expresivo<sup>(4)</sup>. Es un centro clave en la selección léxica y la inhibición de respuestas verbales irrelevantes.", speechRole: "Ayuda a estructurar las oraciones con la gramática correcta (función sintáctica) y participa en la interpretación de estructuras complejas y ambiguas (ej. lenguaje figurado y chistes).", studyReason: "Importante para la terapia de <strong>agramatismo</strong> en afasias y para trastornos del desarrollo del lenguaje (TDL) con afectación sintáctica. Es el componente ejecutivo del lenguaje.", disorders: "Agramatismo, dificultades en la fluidez verbal y en la generación de oraciones complejas. Trastornos en la selección léxica<sup>(4)</sup>.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Brodmann_area_45_animation_small.gif" },
+            { id: 46, name: "Corteza Prefrontal Dorsolateral", gyrus: "Giro frontal medio", lobe: "Frontal", func: "Control ejecutivo superior, <strong>memoria de trabajo</strong> y mantenimiento del foco atencional (control top-down)<sup>(2)</sup>. Permite el razonamiento lógico y la alternancia de tareas (flexibilidad cognitiva).", speechRole: "Soporte de la <strong>memoria de trabajo verbal</strong> y no verbal, esencial para el procesamiento sintáctico de oraciones largas y complejas y para el seguimiento de la coherencia del discurso.", studyReason: "Disfunción ligada a los déficits en la producción y comprensión de estructuras lingüísticas complejas y en el discurso desorganizado post-lesional.", disorders: "Déficit en la manipulación de información en línea, dificultades en la comprensión de estructuras incrustadas (sintaxis), perseveración verbal<sup>(2)</sup>.", references: "(2)", functionalGroup: "Ejecutivo", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Brodmann_area_46_animation_small.gif" },
+            { id: 47, name: "Corteza Orbitofrontal (Lateral)", gyrus: "Giro frontal inferior", lobe: "Frontal", func: "Procesamiento de la <strong>sintaxis</strong> y la <strong>semántica</strong>, especialmente el lenguaje abstracto y la ambigüedad<sup>(4)</sup>. También está implicada en la codificación de información emocional.", speechRole: "Trabaja en conjunto con Broca para la estructuración sintáctica, pero se enfoca más en el significado profundo y la capacidad de interpretación del <strong>lenguaje figurado</strong> y las intenciones comunicativas (pragmática).", studyReason: "Implicada en la prosodia y la capacidad de interpretación del lenguaje figurado, áreas cruciales en la pragmática y la interacción social.", disorders: "Problemas en la interpretación de metáforas, ambigüedad semántica, y posibles déficits prosódicos y de regulación emocional en el discurso<sup>(4)</sup>.", references: "(4)", functionalGroup: "Lenguaje", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Brodmann_area_47_animation_small.gif" },
+
+            // ÁREAS LIMBICAS/PRIMARIAS (48-52) - NO FONO/PATOLOGÍAS
+            { id: 48, name: "Corteza Perirrenal (Límbica)", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Memoria de asociación y memoria espacial, considerada un área de transición entre el hipocampo y la neocorteza<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 49, name: "Corteza Parasubicular (Límbica)", gyrus: "Giro parahipocampal", lobe: "Temporal", func: "Parte del circuito hipocampal. Rol en la memoria declarativa y la orientación espacial<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Ejecutivo", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial/Límbica" },
+            { id: 50, name: "Corteza Temporal Superior (Límbica)", gyrus: "Giro temporal superior", lobe: "Temporal", func: "Procesamiento auditivo complejo y asociación multisensorial<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Auditivo", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial" },
+            { id: 51, name: "Corteza Temporal Límbica", gyrus: "Polo temporal (Cara inferior)", lobe: "Temporal", func: "Integración olfativa y funciones de memoria emocional y social. Ubicada en la parte inferior del lóbulo temporal<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Sensorial", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial" },
+            { id: 52, name: "Corteza Parainsular (Límbica)", gyrus: "Opérculo temporal", lobe: "Temporal/Insular", func: "Procesamiento auditivo en el límite de la ínsula y el lóbulo temporal. Funciona como un área de transición citoarquitectónica<sup>(1)</sup>.", speechRole: "N/A", studyReason: "N/A", disorders: "N/A", references: "(1)", functionalGroup: "Auditivo", imageUrl: "", isSpecial: true, specialLabel: "Área Primordial" },
         ];
 
         const functionalGroups = {
@@ -179,40 +282,13 @@
             "Todos": { color: "bg-gray-500", name: "Todos" }
         };
 
-        const lobes = ["Todos", "Frontal", "Parietal", "Temporal", "Occipital", "Insular"];
+        const lobes = ["Todos", "Frontal", "Parietal", "Temporal", "Occipital", "Insular", "Límbico"];
 
+        
         let currentFilters = {
             group: "Todos",
             lobe: "Todos"
         };
-        let selectedAreaId = null; // Inicia sin un área seleccionada para mostrar la bienvenida
-
-        // Nueva tarjeta de bienvenida (Ajustada y Centrada)
-        const welcomeCard = `
-            <div class="flex flex-col items-center justify-center text-center py-12 px-6">
-                
-                <h2 class="text-3xl font-bold text-gray-800 mb-3">¡Bienvenidos!</h2>
-
-                <!-- Imagen de Dr. Brodmann: Más grande y sin forma circular -->
-                <div class="max-w-xs mb-6 overflow-hidden shadow-xl rounded-lg border-2 border-gray-200">
-                    <img src="https://media.licdn.com/dms/image/v2/D5612AQGEis603Btv9w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695069995765?e=2147483647&v=beta&t=xzT4VuiiUlapFSwfOgIygr_iu1H7tPct7QUOO-qJ4Fw" 
-                         alt="Dr. Korbinian Brodmann" 
-                         class="w-full h-auto max-h-52 object-contain">
-                </div>
-                
-                <div class="max-w-xl mx-auto mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 text-left">
-                    <p class="text-gray-600 leading-relaxed">
-                        Korbinian Brodmann, Neuropsiquiatra alemán, fue el primero en crear un “mapa” de la corteza cerebral humana y dividirlas en áreas específicas donde cada una tiene una función, ubicación y número específico, basándose en las diferencias en la organización celular, que observó a través de un proceso de tinción. Finalmente dio a conocer las llamadas “Áreas de Brodmann” en el año 1909 en su monografía "Vergleichende Lokalisationslehre der Großhirnrinde" donde se habla de la teoría de la localización comparada de la corteza cerebral.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed mt-3">
-                        Para la <strong>Fonoaudiología</strong>, este mapeo es crucial. Nos permite realizar una <strong>correlación anátomo-clínica</strong> precisa, vinculando patologías del lenguaje, el habla, la audición o la deglución con la lesión en un área cortical específica. Es la base del <strong>diagnóstico neurofuncional</strong>.
-                    </p>
-                    <p class="mt-4 text-xs text-gray-500 text-center">
-                        Para mejor experiencia, revise la guía en un PC o active el "modo escritorio" de su celular.
-                    </p>
-                </div>
-            </div>
-        `;
 
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -220,6 +296,227 @@
             const lobeFilterSelect = document.getElementById('lobe-filter');
             const areaListContainer = document.getElementById('area-list');
             const contentDisplay = document.getElementById('content-display');
+
+            // --- DEFINICIÓN DE FUNCIONES LOCALES ---
+
+            function renderAreaList() {
+                areaListContainer.innerHTML = '';
+                // 1. Filtrar
+                let filteredData = brodmannData.filter(area => {
+                    const groupMatch = currentFilters.group === "Todos" || area.functionalGroup === currentFilters.group;
+                    // Manejar las áreas que están en dos lóbulos (ej. Parietal/Insular)
+                    const lobeMatch = currentFilters.lobe === "Todos" || area.lobe.includes(currentFilters.lobe); 
+                    return groupMatch && lobeMatch;
+                });
+                
+                // 2. Renderizar
+                if(filteredData.length === 0){
+                    areaListContainer.innerHTML = `<p class="text-gray-500 p-4 text-center">No hay áreas que coincidan con los filtros seleccionados.</p>`;
+                    return;
+                }
+
+                filteredData.forEach(area => {
+                    const item = document.createElement('div');
+                    item.className = `area-item p-3 cursor-pointer rounded-lg border-l-4 border-transparent transition-all duration-200 ${selectedAreaId === area.id ? 'selected' : ''}`;
+                    item.dataset.id = area.id;
+                    
+                    // Distintivo para Áreas Primordiales en la lista lateral
+                    let primordialTag = '';
+                    if (area.isSpecial) {
+                         // Usar la etiqueta Primordial para todas las especiales para simplificar el menú
+                        primordialTag = `<span class="text-xs text-red-500 font-semibold italic ml-1"> (Primordial)</span>`;
+                    }
+
+                    item.innerHTML = `
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="w-5 h-5 mr-3 rounded-full ${functionalGroups[area.functionalGroup].color}"></span>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Área ${area.id} ${primordialTag}</p>
+                                    <p class="text-xs text-gray-500">${area.name}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    item.addEventListener('click', () => {
+                        selectedAreaId = area.id;
+                        renderContent(area.id);
+                        document.querySelectorAll('.area-item').forEach(el => el.classList.remove('selected'));
+                        item.classList.add('selected');
+                    });
+                    areaListContainer.appendChild(item);
+                });
+            }
+
+            function renderContent(areaId) {
+                // Si el ID es nulo (inicio de la aplicación), muestra la tarjeta de bienvenida
+                if (areaId === null) {
+                    contentDisplay.innerHTML = welcomeCard;
+                    return;
+                }
+
+                const area = brodmannData.find(a => a.id === areaId);
+                const imageUrl = area && area.imageUrl && area.imageUrl !== '' ? area.imageUrl : PLACEHOLDER_IMG;
+
+
+                if (!area) {
+                    contentDisplay.innerHTML = welcomeCard;
+                    return;
+                }
+                
+                const isSpecialArea = area.isSpecial === true;
+                const hasImage = imageUrl && imageUrl !== PLACEHOLDER_IMG && imageUrl !== '';
+                
+                // Define el ancho de la columna de detalles basado en si hay imagen
+                const detailColumnWidthClass = hasImage ? 'lg:w-2/3' : 'lg:w-full';
+
+                // --- Lógica de Crédito Condicional ---
+                let imageCreditHtml = `<p class="mt-2 text-xs text-gray-400 text-center">Imagen: Wikipedia.</p>`;
+                if (imageUrl.toLowerCase().endsWith('.gif')) {
+                    // Crédito largo solo para GIFs animados
+                    imageCreditHtml = `<p class="mt-2 text-xs text-gray-400 text-center">Imagen: Wikipedia. Autor: Polygon data were generated by Database Center for Life Science.</p>`;
+                }
+                
+                // Generar el texto de ayuda visual solo para el área 17, 18, 19
+                let visualHelpText = '';
+                if (area.id === "17, 18, 19") {
+                    visualHelpText = `
+                        <p class="mt-1 text-xs text-gray-500 text-center">
+                            <strong>AB17:</strong> <span class="color-yellow font-semibold">Amarillo</span>, 
+                            <strong>AB18:</strong> <span class="color-orange font-semibold">Naranja</span> y 
+                            <strong>AB19:</strong> <span class="color-blue font-semibold">Azul</span>.
+                        </p>
+                    `;
+                }
+
+                // Determinar si debe mostrar la etiqueta especial
+                const specialLabelHtml = isSpecialArea ? 
+                    `<span class="ml-2 inline-block px-3 py-1 text-xs font-semibold bg-gray-300 text-gray-700 rounded-full">${area.specialLabel}</span>` : '';
+
+
+                let imageColumnHtml = '';
+
+                if (hasImage) {
+                    imageColumnHtml = `
+                        <div class="w-full lg:w-1/3">
+                            <!-- Contenedor con aspecto cuadrado forzado (aspect-square) -->
+                            <div class="aspect-square w-full rounded-lg shadow-md overflow-hidden bg-gray-100"> 
+                                <img src="${imageUrl}" onerror="this.onerror=null; this.src='${PLACEHOLDER_IMG}';" alt="Representación del Área ${area.id}" class="w-full h-full object-contain">
+                            </div>
+                            <!-- Crédito de imagen (Condicional) -->
+                            ${imageCreditHtml}
+                            <!-- Leyenda de colores -->
+                            ${visualHelpText}
+                        </div>
+                    `;
+                }
+
+
+                contentDisplay.innerHTML = `
+                    <div class="flex flex-col lg:flex-row gap-8 relative">
+                        <!-- Botón de retorno a Bienvenida: Ahora con Icono de Casa -->
+                        <button onclick="resetToWelcome()" class="absolute right-0 top-0 text-lg text-blue-600 hover:text-blue-800 font-medium p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-150 border border-gray-200" title="Volver a Inicio">
+                            🏠
+                        </button>
+                        
+                        ${imageColumnHtml}
+
+                        <div class="w-full ${detailColumnWidthClass}">
+                            <div class="flex items-center mb-2">
+                                <span class="inline-block px-3 py-1 text-sm font-semibold text-white ${functionalGroups[area.functionalGroup].color} rounded-full">${functionalGroups[area.functionalGroup].name}</span>
+                                ${specialLabelHtml}
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-800">Área de Brodmann ${area.id}</h2>
+                            <p class="text-xl text-gray-600 mt-1">${area.name}</p>
+                            <p class="text-lg text-gray-500 mt-2"><strong>Lóbulo:</strong> ${area.lobe} | <strong>Giro:</strong> ${area.gyrus}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div class="border-b border-gray-200">
+                            <nav id="content-tabs" class="-mb-px flex space-x-6" aria-label="Tabs">
+                                <button data-tab="general" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300 active-tab">Generalidades</button>
+                                ${!isSpecialArea ? `
+                                    <button data-tab="fono" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300">Relevancia Fonoaudiológica</button>
+                                    <button data-tab="patho" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300">Patologías</button>
+                                ` : ''}
+                            </nav>
+                        </div>
+                        <div id="tab-content" class="py-6">
+                            <!-- Contenido de las pestañas -->
+                        </div>
+                    </div>
+                `;
+                
+                const tabsContainer = document.getElementById('content-tabs');
+                tabsContainer.addEventListener('click', (e) => {
+                    if (e.target.matches('.tab-button')) {
+                        const tabName = e.target.dataset.tab;
+                        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active-tab'));
+                        e.target.classList.add('active-tab');
+                        renderTabContent(area, tabName, isSpecialArea);
+                    }
+                });
+
+                renderTabContent(area, 'general', isSpecialArea);
+            }
+
+            function renderTabContent(area, tabName, isSpecialArea) {
+                const tabContentContainer = document.getElementById('tab-content');
+                let content = '';
+                
+                // Contenido de Generalidades
+                if (tabName === 'general') {
+                    content = `
+                        <h3 class="text-xl font-semibold text-gray-700 mb-3">Función Principal</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">${area.func}</p>
+                    `;
+                } 
+                
+                // Contenido de Fonoaudiología y Patologías (Solo si NO es un área especial)
+                else if (!isSpecialArea) {
+                    switch (tabName) {
+                        case 'fono':
+                            content = `
+                                <h3 class="text-xl font-semibold text-gray-700 mb-3">Rol Fonoaudiológico</h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-4">${area.speechRole}</p>
+                                <h3 class="text-xl font-semibold text-gray-700 mb-3">¿Por qué estudiarla?</h3>
+                                <p class="text-lg text-gray-600 leading-relaxed">${area.studyReason}</p>
+                            `;
+                            break;
+                        case 'patho':
+                            content = `
+                                 <h3 class="text-xl font-semibold text-gray-700 mb-3">Trastornos y Semiología Asociados</h3>
+                                <p class="text-lg text-gray-600 leading-relaxed">${area.disorders}</p>
+                            `;
+                            break;
+                    }
+                }
+
+                // Si se selecciona una pestaña especial para un área especial (que no debería ocurrir si se ocultan los botones)
+                if (isSpecialArea && tabName !== 'general') {
+                    content = `<p class="text-gray-500 italic">Detalles de Rol Fonoaudiológico y Patologías no aplicables (N/A) ya que esta área es primordial, límbica o su mapeo se basa principalmente en modelos no humanos.</p>`;
+                }
+
+                
+                content += `<div class="mt-8 text-sm text-gray-400">
+                                <h4 class="font-semibold">Referencias (Vancouver):</h4>
+                                <p>1. Kandel, E. R., Schwartz, J. H., & Jessell, T. M. (2000). Principles of Neural Science. McGraw-Hill. (Referencia primaria para áreas límbicas y primarias).</p>
+                                <p>2. Bear, M. F., Connors, B. W., & Paradiso, M. A. (2016). Neuroscience: Exploring the Brain. Wolters Kluwer.</p>
+                                <p>3. Gazzaniga, M. S., Ivry, R. B., & Mangun, G. R. (2014). Cognitive Neuroscience: The Biology of the Mind. W.W. Norton & Company.</p>
+                                <p>4. Goodglass, H., & Kaplan, E. (1983). The assessment of aphasia and related disorders. Lea & Febiger.</p>
+                                <p>5. Dehaene, S. (2009). Reading in the Brain: The New Science of How We Read. Penguin Books.</p>
+                                <p>6. Poeppel, D., & Hickok, G. (2004). Towards a new functional anatomy of language. Cognition, 92(1-2), 1-12.</p>
+                           </div>`;
+
+                tabContentContainer.innerHTML = content;
+            }
+            
+            // Exponer funciones globales al objeto window para que el onclick las pueda encontrar
+            window.globalRenderContent = renderContent;
+            window.globalRenderAreaList = renderAreaList;
+            
+            // --- INICIALIZACIÓN ---
 
             function setupFilters() {
                 // Crear botones de filtro funcional
@@ -258,164 +555,6 @@
                     }
                 });
             }
-            
-            function renderAreaList() {
-                areaListContainer.innerHTML = '';
-                // 1. Filtrar
-                let filteredData = brodmannData.filter(area => {
-                    const groupMatch = currentFilters.group === "Todos" || area.functionalGroup === currentFilters.group;
-                    // Manejar las áreas que están en dos lóbulos (ej. Parietal/Insular)
-                    const lobeMatch = currentFilters.lobe === "Todos" || area.lobe.includes(currentFilters.lobe); 
-                    return groupMatch && lobeMatch;
-                });
-                
-                // 2. Renderizar
-                if(filteredData.length === 0){
-                    areaListContainer.innerHTML = `<p class="text-gray-500 p-4 text-center">No hay áreas que coincidan con los filtros seleccionados.</p>`;
-                    return;
-                }
-
-                filteredData.forEach(area => {
-                    const item = document.createElement('div');
-                    item.className = `area-item p-3 cursor-pointer rounded-lg border-l-4 border-transparent transition-all duration-200 ${selectedAreaId === area.id ? 'selected' : ''}`;
-                    item.dataset.id = area.id;
-                    item.innerHTML = `
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="w-5 h-5 mr-3 rounded-full ${functionalGroups[area.functionalGroup].color}"></span>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Área ${area.id}</p>
-                                    <p class="text-xs text-gray-500">${area.name}</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    item.addEventListener('click', () => {
-                        selectedAreaId = area.id;
-                        renderContent(area.id);
-                        document.querySelectorAll('.area-item').forEach(el => el.classList.remove('selected'));
-                        item.classList.add('selected');
-                    });
-                    areaListContainer.appendChild(item);
-                });
-            }
-
-            function renderContent(areaId) {
-                // Si el ID es nulo (inicio de la aplicación), muestra la tarjeta de bienvenida
-                if (areaId === null) {
-                    contentDisplay.innerHTML = welcomeCard;
-                    return;
-                }
-
-                const area = brodmannData.find(a => a.id === areaId);
-                // Si la URL está vacía (""), usamos el placeholder. De lo contrario, usamos la URL real.
-                const imageUrl = area && area.imageUrl && area.imageUrl !== '' ? area.imageUrl : PLACEHOLDER_IMG;
-
-
-                if (!area) {
-                    // Si por alguna razón el área seleccionada no se encuentra, vuelve a la bienvenida
-                    contentDisplay.innerHTML = welcomeCard;
-                    return;
-                }
-                
-                // Generar el texto de ayuda visual solo para el área 17, 18, 19
-                let visualHelpText = '';
-                if (area.id === "17, 18, 19") {
-                    visualHelpText = `
-                        <p class="mt-1 text-xs text-gray-500 text-center">
-                            <strong>AB17:</strong> <span class="color-yellow font-semibold">Amarillo</span>, 
-                            <strong>AB18:</strong> <span class="color-orange font-semibold">Naranja</span> y 
-                            <strong>AB19:</strong> <span class="color-blue font-semibold">Azul</span>.
-                        </p>
-                    `;
-                }
-
-
-                contentDisplay.innerHTML = `
-                    <div class="flex flex-col lg:flex-row gap-8">
-                        <div class="w-full lg:w-1/3">
-                            <!-- Contenedor con aspecto cuadrado forzado (aspect-square) -->
-                            <div class="aspect-square w-full rounded-lg shadow-md overflow-hidden bg-gray-100"> 
-                                <img src="${imageUrl}" onerror="this.onerror=null; this.src='${PLACEHOLDER_IMG}';" alt="Representación del Área ${area.id}" class="w-full h-full object-contain">
-                            </div>
-                            <!-- Crédito de imagen -->
-                            <p class="mt-2 text-xs text-gray-400 text-center">Imagen: Wikipedia. Autor: Polygon data were generated by Database Center for Life Science.</p>
-                            <!-- Leyenda de colores -->
-                            ${visualHelpText}
-                        </div>
-                        <div class="w-full lg:w-2/3">
-                             <span class="inline-block px-3 py-1 text-sm font-semibold text-white ${functionalGroups[area.functionalGroup].color} rounded-full mb-2">${area.functionalGroup}</span>
-                            <h2 class="text-3xl font-bold text-gray-800">Área de Brodmann ${area.id}</h2>
-                            <p class="text-xl text-gray-600 mt-1">${area.name}</p>
-                            <p class="text-lg text-gray-500 mt-2"><strong>Lóbulo:</strong> ${area.lobe} | <strong>Giro:</strong> ${area.gyrus}</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <div class="border-b border-gray-200">
-                            <nav id="content-tabs" class="-mb-px flex space-x-6" aria-label="Tabs">
-                                <button data-tab="general" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300 active-tab">Generalidades</button>
-                                <button data-tab="fono" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300">Relevancia Fonoaudiológica</button>
-                                <button data-tab="patho" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-base border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300">Patologías</button>
-                            </nav>
-                        </div>
-                        <div id="tab-content" class="py-6">
-                            <!-- Contenido de las pestañas -->
-                        </div>
-                    </div>
-                `;
-                
-                const tabsContainer = document.getElementById('content-tabs');
-                tabsContainer.addEventListener('click', (e) => {
-                    if (e.target.matches('.tab-button')) {
-                        const tabName = e.target.dataset.tab;
-                        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active-tab'));
-                        e.target.classList.add('active-tab');
-                        renderTabContent(area, tabName);
-                    }
-                });
-
-                renderTabContent(area, 'general');
-            }
-
-            function renderTabContent(area, tabName) {
-                const tabContentContainer = document.getElementById('tab-content');
-                let content = '';
-                switch (tabName) {
-                    case 'general':
-                        content = `
-                            <h3 class="text-xl font-semibold text-gray-700 mb-3">Función Principal</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed">${area.func}</p>
-                        `;
-                        break;
-                    case 'fono':
-                        content = `
-                            <h3 class="text-xl font-semibold text-gray-700 mb-3">Rol Fonoaudiológico</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed mb-4">${area.speechRole}</p>
-                            <h3 class="text-xl font-semibold text-gray-700 mb-3">¿Por qué estudiarla?</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed">${area.studyReason}</p>
-                        `;
-                        break;
-                    case 'patho':
-                        content = `
-                             <h3 class="text-xl font-semibold text-gray-700 mb-3">Trastornos y Semiología Asociados</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed">${area.disorders}</p>
-                        `;
-                        break;
-                }
-                
-                content += `<div class="mt-8 text-sm text-gray-400">
-                                <h4 class="font-semibold">Referencias (Vancouver):</h4>
-                                <p>1. Kandel, E. R., Schwartz, J. H., & Jessell, T. M. (2000). Principles of Neural Science. McGraw-Hill.</p>
-                                <p>2. Bear, M. F., Connors, B. W., & Paradiso, M. A. (2016). Neuroscience: Exploring the Brain. Wolters Kluwer.</p>
-                                <p>3. Gazzaniga, M. S., Ivry, R. B., & Mangun, G. R. (2014). Cognitive Neuroscience: The Biology of the Mind. W.W. Norton & Company.</p>
-                                <p>4. Goodglass, H., & Kaplan, E. (1983). The assessment of aphasia and related disorders. Lea & Febiger.</p>
-                                <p>5. Dehaene, S. (2009). Reading in the Brain: The New Science of How We Read. Penguin Books.</p>
-                                <p>6. Poeppel, D., & Hickok, G. (2004). Towards a new functional anatomy of language. Cognition, 92(1-2), 1-12.</p>
-                           </div>`;
-
-                tabContentContainer.innerHTML = content;
-            }
 
             setupFilters();
             updateActiveFilters();
@@ -425,4 +564,3 @@
     </script>
 </body>
 </html>
-
